@@ -44,31 +44,27 @@ function ServiceList() {
             </tr>
           </thead>
           <tbody>
-            {servicedata && servicedata.length > 0 ? (
-              servicedata.map((data) => (
-                <tr class="border-b border-white text-xl">
-                  <td class="px-6 py-4">{data.id}</td>
-                  <td class="px-6 py-4">{data.name}</td>
-                  <td class="px-6 py-4">{data.description}</td>
-                  <td class="px-6 py-4">Rs. {data.price}</td>
-                  <td class="px-4 py-4 flex gap-4">
-                    <Link to={`/edit/${data.id}`}>
-                      <FaEdit className="text-4xl text-green-500" />
-                    </Link>
-                    <p>
-                      <MdDelete
-                        className="text-4xl text-red-500"
-                        onClick={() => handleDelete(data.id)}
-                      />
-                    </p>
-                  </td>
-                </tr>
-              ))
-            ) : (
-              <div className=" text-3xl my-6 text-center">
-                <h1>ServiceList is Empty</h1>
-              </div>
-            )}
+            {servicedata && servicedata.length > 0
+              ? servicedata.map((data) => (
+                  <tr class="border-b border-white text-xl">
+                    <td class="px-6 py-4">{data.id}</td>
+                    <td class="px-6 py-4">{data.name}</td>
+                    <td class="px-6 py-4">{data.description}</td>
+                    <td class="px-6 py-4">Rs. {data.price}</td>
+                    <td class="px-4 py-4 flex gap-4">
+                      <Link to={`/edit/${data.id}`}>
+                        <FaEdit className="text-4xl text-green-500" />
+                      </Link>
+                      <p>
+                        <MdDelete
+                          className="text-4xl text-red-500"
+                          onClick={() => handleDelete(data.id)}
+                        />
+                      </p>
+                    </td>
+                  </tr>
+                ))
+              : null}
           </tbody>
         </table>
       </div>

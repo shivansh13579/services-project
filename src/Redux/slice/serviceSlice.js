@@ -14,11 +14,10 @@ export const serviceSlice = createSlice({
       localStorage.setItem("service", newService);
     },
     updateService: (state, action) => {
-      const { id, name, price, description } = action.payload; // Extract updated data
-      const index = state.service.findIndex((service) => service.id === id); // Find service by id
+      const { id } = action.payload;
+      const index = state.service.findIndex((service) => service.id === id);
 
       if (index !== -1) {
-        // If service exists, update its properties
         state.service[index] = action.payload;
       }
     },
