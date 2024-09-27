@@ -1,4 +1,16 @@
 # React + Vite
 #Setup instruction
-1.Clone The Project
-    git clone https:https://github.com/shivansh13579/services-project
+#install dependencies
+    npm i
+###run the server
+    npm run dev
+#Dependency
+1.Tailwind Css
+2.yup 
+3redux-persist
+4.react-toastify
+5.react-router-dom
+6.react-redux 
+7.react-icons 
+8.formik
+   
